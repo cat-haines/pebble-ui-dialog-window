@@ -1,0 +1,20 @@
+{
+  "name": "pebble-ui-dialog-window",
+  "author": "Cat Haines <cat@pebble.com>",
+  "version": "0.0.1",
+  "files": ["dist.zip"],
+  "keywords": ["pebble-package"],
+  "dependencies": {},
+  "pebble": {
+    "projectType": "package",
+    "sdkVersion": "3",
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk"
+    ],
+    "resources": {
+      "media": []
+    }
+  }
+}
