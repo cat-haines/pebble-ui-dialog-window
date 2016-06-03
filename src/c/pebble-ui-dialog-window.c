@@ -75,11 +75,6 @@ static void prv_window_unload(Window* window) {
   bitmap_layer_destroy(this->icon_layer);
   text_layer_destroy(this->message_layer);
 
-  // Clean-up pointers
-  this->background_layer = NULL;
-  this->icon_layer = NULL;
-  this->message_layer = NULL;
-
   // Update model
   this->loaded = false;
 }
@@ -121,13 +116,6 @@ void ui_dialog_window_destroy(UIDialogWindow* this) {
 
   // Free memory
   if (this) free(this);
-
-  // Cleanup stray pointers
-  this->window = NULL;
-  this->background_layer = NULL;
-  this->icon_layer = NULL;
-  this->message_layer = NULL;
-
   this = NULL;
 }
 
