@@ -7,9 +7,12 @@ static void prv_window_update_ui(UIDialogWindow* this) {
 
   Layer* window_layer = window_get_root_layer(this->window);
   const GRect window_bounds = layer_get_bounds(window_layer);
+
+  bitmap_layer_set_bitmap(this->icon_layer, this->icon_bitmap);
+  bitmap_layer_set_compositing_mode(this->icon_layer, GCompOpSet);
   GRect icon_bounds = gbitmap_get_bounds(this->icon_bitmap);
 
-  layer_set_frame(this->icon_layer, GRect(
+  layer_set_frame(bitmap_layer_get_layer(this->icon_layer), GRect(
     PBL_IF_ROUND_ELSE((window_bounds.size.w - icon_bounds.size.w) / 2, DIALOG_MESSAGE_WINDOW_MARGIN),
     DIALOG_MESSAGE_WINDOW_MARGIN,
     icon_bounds.size.w,
@@ -36,19 +39,6 @@ static void prv_on_background_layer_update(Layer* layer, GContext* ctx) {
   graphics_fill_rect(ctx, layer_get_bounds(layer), 0, 0);
 }
 
-static void prv_on_icon_layer_update(Layer* layer, GContext* ctx) {
-  UIDialogWindow* this = window_get_user_data(layer_get_window(layer));
-
-  GRect bounds = layer_get_bounds(layer);
-  GRect bitmap_bounds = gbitmap_get_bounds(this->icon_bitmap);
-  graphics_context_set_compositing_mode(ctx, GCompOpSet);
-
-  graphics_draw_bitmap_in_rect(ctx, this->icon_bitmap, (GRect){
-    .origin = GPoint(0,0),
-    .size = bitmap_bounds.size
-  });
-}
-
 // Window Handlers
 static void prv_window_load(Window* window) {
   UIDialogWindow* this = window_get_user_data(window);
@@ -60,15 +50,14 @@ static void prv_window_load(Window* window) {
   this->background_layer = layer_create(window_bounds);
   layer_set_update_proc(this->background_layer, prv_on_background_layer_update);
 
-  this->icon_layer = layer_create(window_bounds);
-  layer_set_update_proc(this->icon_layer, prv_on_icon_layer_update);
+  this->icon_layer = bitmap_layer_create(window_bounds);
 
   this->message_layer = text_layer_create(window_bounds);
   text_layer_set_text_alignment(this->message_layer, PBL_IF_ROUND_ELSE(GTextAlignmentCenter, GTextAlignmentLeft));
   text_layer_set_background_color(this->message_layer, GColorClear);
 
   layer_add_child(window_layer, this->background_layer);
-  layer_add_child(this->background_layer, this->icon_layer);
+  layer_add_child(this->background_layer, bitmap_layer_get_layer(this->icon_layer));
   layer_add_child(this->background_layer, text_layer_get_layer(this->message_layer));
 
   // Set the loaded flag in the model
@@ -83,7 +72,7 @@ static void prv_window_unload(Window* window) {
 
   // Destroy Layers
   layer_destroy(this->background_layer);
-  layer_destroy(this->icon_layer);
+  bitmap_layer_destroy(this->icon_layer);
   text_layer_destroy(this->message_layer);
 
   // Clean-up pointers
@@ -124,7 +113,7 @@ UIDialogWindow* ui_dialog_window_create(char* message, GBitmap* icon) {
 void ui_dialog_window_destroy(UIDialogWindow* this) {
   // Destroy Layers
   if (this->background_layer) layer_destroy(this->background_layer);
-  if (this->icon_layer) layer_destroy(this->icon_layer);
+  if (this->icon_layer) bitmap_layer_destroy(this->icon_layer);
   if (this->message_layer) text_layer_destroy(this->message_layer);
 
   // Destroy Window

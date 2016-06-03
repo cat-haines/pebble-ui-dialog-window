@@ -6,7 +6,7 @@ typedef struct UIDialogWindow {
   // "View"
   Window* window;
   Layer* background_layer;
-  Layer* icon_layer;
+  BitmapLayer* icon_layer;
   TextLayer* message_layer;
 
   // "Model"
