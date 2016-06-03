@@ -54,9 +54,9 @@ int main(void) {
 }
 ```
 
-## Documentation
+### Documentation
 
-`UIDialogWindow* ui_dialog_window_create(char* message, GBitmap* icon);`
+#### `UIDialogWindow* ui_dialog_window_create(char* message, GBitmap* icon);`
 
 Creates a new `UIDialogWindow` object that can be used to display and customize
 a dialog window.
@@ -65,14 +65,14 @@ a dialog window.
 parameters, so the developer must ensure the objects persist for the lifetime of
 the dialog window.
 
-`void ui_dialog_window_destroy(UIDialogWindow* this);`
+#### `void ui_dialog_window_destroy(UIDialogWindow* this);`
 
 Frees all memory associated with the `UIDialogWindow` object.
 
 **NOTE**: `ui_dialog_window_destroy` will not free the memory associated with
 the `message` or `icon` parameters passed into `ui_dialog_window_create`.
 
-`Window* ui_dialog_window_get_window(UIDialogWindow* this);`
+#### `Window* ui_dialog_window_get_window(UIDialogWindow* this);`
 
 Returns a [Window](https://developer.pebble.com/docs/c/User_Interface/Window)
 object that can be pushed onto the
@@ -80,23 +80,23 @@ object that can be pushed onto the
 or manipulated in other ways (such as assigning ClickHandlers with
 [window_set_click_config_provider](https://developer.pebble.com/docs/c/User_Interface/Window/#window_set_click_config_provider_with_context).
 
-`void ui_dialog_window_set_background_color(UIDialogWindow* this, const GColor color);`
+#### `void ui_dialog_window_set_background_color(UIDialogWindow* this, const GColor color);`
 
 Sets the `UIDialogWindow`'s background color.
 
-`void ui_dialog_window_set_label_color(UIDialogWindow* this, const GColor color);`
+#### `void ui_dialog_window_set_label_color(UIDialogWindow* this, const GColor color);`
 
 Set's the font color of the `UIDialogWindow`'s label.
 
-`void ui_dialog_window_set_label_font(UIDialogWindow* this, const GFont font);`
+#### `void ui_dialog_window_set_label_font(UIDialogWindow* this, const GFont font);`
 
 Set's the font of the `UIDialogWindow`'s label.
 
-`void ui_dialog_window_set_label_text(UIDialogWindow* this, char* message);`
+#### `void ui_dialog_window_set_label_text(UIDialogWindow* this, char* message);`
 
 Set's the text of the `UIDialogWindow`'s label.
 
-`void ui_dialog_window_set_icon(UIDialogWindow* this, GBitmap* icon);`
+#### `void ui_dialog_window_set_icon(UIDialogWindow* this, GBitmap* icon);`
 
 Set's the image of the `UIDialogWindow`'s icon.
 
