@@ -4,9 +4,7 @@ This package enables [Pebble developers](https://developer.pebble.com) to create
 and customize simple dialog windows in their Pebble watchapps. Dialog windows
 consist of an icon, and a message.
 
-| | | |
-|-|-|-|
-| ![Aplite](/images/aplite.png) | ![Basalt](/images/basalt.png) | ![Chalk](/images/chalk.png) |
+![Aplite](/images/aplite.png) ![Basalt](/images/basalt.png) ![Chalk](/images/chalk.png)
 
 ## Documentation
 
@@ -24,3 +22,7 @@ consist of an icon, and a message.
 ### void ui_dialog_window_set_label_text(UIDialogWindow* this, char* message);
 
 ### void ui_dialog_window_set_icon(UIDialogWindow* this, GBitmap* icon);
+
+## License
+
+This library is licensed under the [MIT license](/LICENSE).
