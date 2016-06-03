@@ -1,5 +1,5 @@
 #include <pebble.h>
-#include "./ui_dialog_window.h"
+#include "ui_dialog_window.h"
 
 // Private Methods
 static void prv_window_update_ui(UIDialogWindow* this) {
