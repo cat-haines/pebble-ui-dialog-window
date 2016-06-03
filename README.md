@@ -11,7 +11,7 @@ consist of an icon, and a message.
 `UIDialogWindow`s are pre-configured, customizable dialog windows that
 developers can create and use in their Pebble watchapps.
 
-By default, the dialog window has the following properties and behaviour:
+By default, the dialog window has the following properties and behavior:
 - Default Background Color: `GColorClear`
 - Default Font Color: `GColorBlack`
 - Default Font: `FONT_KEY_GOTHIC_24_BOLD`
