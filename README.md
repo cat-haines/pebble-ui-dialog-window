@@ -20,7 +20,7 @@ By default, the dialog window has the following properties and behavior:
 ## Installation
 
 ```
-pebble package install --save pebble-ui-dialog-window
+pebble package install pebble-ui-dialog-window
 ```
 
 ## Sample Usage
