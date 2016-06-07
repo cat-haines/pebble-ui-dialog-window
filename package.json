@@ -3,7 +3,11 @@
   "author": "Cat Haines <cat@pebble.com>",
   "version": "0.1.1",
   "files": ["dist.zip"],
-  "keywords": ["pebble-package"],
+  "keywords": [
+    "pebble-package",
+    "pebble-ui",
+    "pebble-window"
+  ],
   "dependencies": {},
   "pebble": {
     "projectType": "package",

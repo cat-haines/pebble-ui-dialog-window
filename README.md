@@ -1,8 +1,6 @@
 # UIDialogWindow
 
-This package enables [Pebble developers](https://developer.pebble.com) to create
-and customize simple dialog windows in their Pebble watchapps. Dialog windows
-consist of an icon, and a message.
+A library to create and customize simple dialog windows for Pebble watchapps.
 
 ![Aplite](/images/aplite.png) ![Basalt](/images/basalt.png) ![Chalk](/images/chalk.png)
 
