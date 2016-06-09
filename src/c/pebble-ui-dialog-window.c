@@ -71,9 +71,9 @@ static void prv_window_unload(Window* window) {
   UIDialogWindow* this = window_get_user_data(window);
 
   // Destroy Layers
-  layer_destroy(this->background_layer);
-  bitmap_layer_destroy(this->icon_layer);
-  text_layer_destroy(this->message_layer);
+  layer_destroy(this->background_layer); this->background_layer = NULL;
+  bitmap_layer_destroy(this->icon_layer); this->icon_layer = NULL;
+  text_layer_destroy(this->message_layer); this->message_layer =  NULL;
 
   // Update model
   this->loaded = false;
