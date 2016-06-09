@@ -8,6 +8,10 @@
     "pebble-ui",
     "pebble-window"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cat-haines/pebble-ui-dialog-window.git"
+  },
   "dependencies": {},
   "pebble": {
     "projectType": "package",
