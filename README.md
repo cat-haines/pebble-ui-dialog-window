@@ -2,7 +2,7 @@
 
 A library to create and customize simple dialog windows for Pebble watchapps.
 
-![Aplite](/images/aplite.png) ![Basalt](/images/basalt.png) ![Chalk](/images/chalk.png)
+![Aplite](images/aplite.png) ![Basalt](images/basalt.png) ![Chalk](images/chalk.png)
 
 ## Behavior
 
