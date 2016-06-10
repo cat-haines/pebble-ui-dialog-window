@@ -1,0 +1,42 @@
+{
+  "name": "test-app",
+  "author": "MakeAwesomeHappen",
+  "version": "1.0.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {
+    "pebble-ui-dialog-window": "../"
+  },
+  "pebble": {
+    "displayName": "test-app",
+    "uuid": "5c6c1338-8c86-46a2-afeb-6f4af9011ba3",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk"
+    ],
+    "watchapp": {
+      "watchface": false
+    },
+    "messageKeys": [
+      "dummy"
+    ],
+    "resources": {
+      "media": [
+        {
+          "file": "images/frog.png",
+          "name": "FROG",
+          "storageFormat": "png",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk"
+          ],
+          "type": "bitmap"
+        }
+      ]
+    }
+  }
+}

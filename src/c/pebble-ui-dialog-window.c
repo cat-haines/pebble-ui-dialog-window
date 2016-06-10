@@ -127,8 +127,8 @@ UIDialogWindow* ui_dialog_window_create(char* message, GBitmap* icon) {
   this->background_color = GColorClear;
   this->message_color = GColorBlack;
   this->message_font = fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD);
-  this->message_alignment = PBL_IF_ROUND_ELSE(GTextAlignmentCenter, GTextAlignmentCenter);
-  this->icon_alignment = PBL_IF_ROUND_ELSE(GTextAlignmentCenter, GTextAlignmentCenter);
+  this->message_alignment = PBL_IF_ROUND_ELSE(GTextAlignmentCenter, GTextAlignmentLeft);
+  this->icon_alignment = PBL_IF_ROUND_ELSE(GAlignCenter, GAlignLeft);
 
   this->window = window;
   this->message_text = message;
