@@ -13,7 +13,7 @@ void ui_dialog_window_set_background_color(UIDialogWindow* this, const GColor co
 void ui_dialog_window_set_label_color(UIDialogWindow* this, const GColor color);
 void ui_dialog_window_set_label_font(UIDialogWindow* this, const GFont font);
 void ui_dialog_window_set_label_text(UIDialogWindow* this, char* message);
-void ui_dialog_window_set_label_alignment(UIDialogWindow* this, GTextAlignment align);
+void ui_dialog_window_set_label_alignment(UIDialogWindow* this, const GTextAlignment align);
 
 void ui_dialog_window_set_icon(UIDialogWindow* this, GBitmap* icon);
-GAlign ui_dialog_window_set_icon_alignment(UIDialogWindow* this, GAlign align);
+GAlign ui_dialog_window_set_icon_alignment(UIDialogWindow* this, const GAlign align);

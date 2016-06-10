@@ -175,7 +175,7 @@ void ui_dialog_window_set_label_text(UIDialogWindow* this, char* message) {
   prv_window_update_ui(this);
 }
 
-void ui_dialog_window_set_label_alignment(UIDialogWindow* this, GTextAlignment align) {
+void ui_dialog_window_set_label_alignment(UIDialogWindow* this, const GTextAlignment align) {
   this->message_alignment = align;
   prv_window_update_ui(this);
 }
@@ -185,7 +185,7 @@ void ui_dialog_window_set_icon(UIDialogWindow* this, GBitmap* icon) {
   prv_window_update_ui(this);
 }
 
-GAlign ui_dialog_window_set_icon_alignment(UIDialogWindow* this, GAlign align) {
+GAlign ui_dialog_window_set_icon_alignment(UIDialogWindow* this, const GAlign align) {
   if (align == GAlignTopLeft || align == GAlignLeft || align == GAlignBottomLeft) {
     this->icon_alignment = GAlignLeft;
     return GAlignLeft;

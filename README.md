@@ -90,9 +90,26 @@ Set's the font color of the `UIDialogWindow`'s label.
 
 Set's the font of the `UIDialogWindow`'s label.
 
+#### void ui_dialog_window_set_label_alignment(UIDialogWindow* this, const GTextAlignment align);
+
+Set's the alignment of the `UIDialogWindow`'s label. By default, the alignment
+is set to `GTextAlignmentLeft` for rectangular displays, and
+`GTextAlignmentCenter` for circular screens.
+
+
 #### void ui_dialog_window_set_label_text(UIDialogWindow* this, char* message);
 
 Set's the text of the `UIDialogWindow`'s label.
+
+
+#### GAlign ui_dialog_window_set_icon_alignment(UIDialogWindow* this, const GAlign align);
+
+Set's the alignment of the `UIDialogWindow`'s icon. By default, the alignment is
+set to `GAlignmentLeft` for rectangular displays, and `GAlignmentCenter` for
+circular screens and returns the set alignment.
+
+If you try to set any alignment other than `GAlignLeft`, `GAlignCenter`, or
+`GAlignRight` the method will pick the closest match.
 
 #### void ui_dialog_window_set_icon(UIDialogWindow* this, GBitmap* icon);
 
