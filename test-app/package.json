@@ -35,6 +35,17 @@
             "chalk"
           ],
           "type": "bitmap"
+        },
+        {
+          "file": "images/egg.png",
+          "name": "EGG",
+          "storageFormat": "png",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk"
+          ],
+          "type": "bitmap"
         }
       ]
     }
