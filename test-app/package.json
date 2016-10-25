@@ -2,7 +2,9 @@
   "name": "test-app",
   "author": "MakeAwesomeHappen",
   "version": "1.0.0",
-  "keywords": ["pebble-app"],
+  "keywords": [
+    "pebble-app"
+  ],
   "private": true,
   "dependencies": {
     "pebble-ui-dialog-window": "../"
@@ -15,7 +17,9 @@
     "targetPlatforms": [
       "aplite",
       "basalt",
-      "chalk"
+      "chalk",
+      "diorite",
+      "emery"
     ],
     "watchapp": {
       "watchface": false
@@ -29,22 +33,12 @@
           "file": "images/frog.png",
           "name": "FROG",
           "storageFormat": "png",
-          "targetPlatforms": [
-            "aplite",
-            "basalt",
-            "chalk"
-          ],
           "type": "bitmap"
         },
         {
           "file": "images/egg.png",
           "name": "EGG",
           "storageFormat": "png",
-          "targetPlatforms": [
-            "aplite",
-            "basalt",
-            "chalk"
-          ],
           "type": "bitmap"
         }
       ]
